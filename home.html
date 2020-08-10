@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Stock Managment
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class=" cards-bg">
+
+  <ion-card class="cards-list-demo">
+    <ion-card-header>
+     
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item class="one" [navPush]="dash" >
+        <ion-icon name='apps' item-start></ion-icon>
+        Dashboard
+      </button>
+
+      <button ion-item class="two" [navPush]="Acc">
+        <ion-icon name='briefcase' item-start></ion-icon>
+       Account
+      </button>
+
+      <button ion-item class="three" [navPush]="purch"> 
+        <ion-icon name='archive' item-start></ion-icon>
+        Report
+      </button>
+
+
+      <button ion-item class="fourio">
+        <ion-icon name='logo-buffer' item-start></ion-icon>
+        Billing
+      </button>
+
+      <button ion-item  class="five"[navPush]="purch1">
+        <ion-icon name='settings' item-start></ion-icon>
+        Setting
+      </button>
+
+
+
+    </ion-list>
+  </ion-card>
+
+
+
+  <ion-fab bottom center>
+    <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
+    
+    <ion-fab-list side="top">
+      <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      <button ion-fab color="dark"><ion-icon name="logo-whatsapp"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  
+</ion-content>

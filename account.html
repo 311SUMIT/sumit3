@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Accounts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class=" cards-bg">
+
+  <ion-card class="cards-list-demo">
+    <ion-card-header>
+      Account List
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item (click)="pushInvesment()">
+        <ion-icon name='logo-bitcoin' item-start></ion-icon>
+        Investment
+      </button>
+
+      <button ion-item (click)="pushPage()">
+        <ion-icon name='cart' item-start></ion-icon>
+        Purchase
+      </button>
+
+      <button ion-item (click)="pushSales()">
+        <ion-icon name='md-basket' item-start></ion-icon>
+        Sales
+      </button>
+
+      <button ion-item (click)="pushSalesReturn()">
+        <ion-icon name='md-return-left' item-start></ion-icon>
+        Sales return
+      </button>
+
+
+
+    </ion-list>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,99 @@
+<!--
+  Generated template for the SalesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sales Return</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="data">
+    <ion-segment-button value="Sales_Return">
+      Sales
+      </ion-segment-button>
+      <ion-segment-button value="Sales_Return_Report">
+        Sales Return Report
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="data">
+    <ion-list *ngSwitchCase="'Sales_return'">
+      <ion-item>
+        <ion-label floating>Return Date</ion-label>
+        <ion-input type="Date"[(ngModel)]="Obj.return_date"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label floating>Invoice No.</ion-label>
+        <ion-input type="text"[(ngModel)]="Obj.invoice_no"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Returned From</ion-label>
+        <ion-input type="text"[(ngModel)]="Obj.returned_from"></ion-input>
+      </ion-item>
+
+      
+
+      
+      <ion-item>
+        <ion-label floating>Item code</ion-label>
+        <ion-input type="text"[(ngModel)]="Obj.item_code"></ion-input>
+      </ion-item>
+
+      
+      <ion-item>
+        <ion-label floating>Item Description</ion-label>
+        <ion-input type="text"[(ngModel)]="Obj.item_description"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Sold Quantity</ion-label>
+        <ion-input type="text"[(ngModel)]="Obj.sold_quantity"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Returned Quantity</ion-label>
+        <ion-input type="text"[(ngModel)]="Obj.returned_quantity"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label floating>Sold Unit Price</ion-label>
+        <ion-input type="text"[(ngModel)]="Obj.sold_unit_price"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Amount Returned</ion-label>
+        <ion-input type="text"[(ngModel)]="Obj.amount_returned"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block (click)="Submit()">Save</button>
+      </div>
+  </ion-list>
+
+
+  <div *ngSwitchCase="'Sales_Return_Report'">
+    <ion-card *ngFor="let item of myarr"> 
+      <ion-label><span>Return Date:</span><span>{{item.return_date}}</span></ion-label>
+      <ion-label><span>Invoice No.:</span><span>{{item.invoice_no}}</span></ion-label>
+      <ion-label><span>Returned From:</span><span>{{item.returned_from}}</span></ion-label>
+      <ion-label><span>Item code:</span><span>{{item.item_code}}</span></ion-label>
+      <ion-label><span>Description:</span><span>{{item.item_description}}</span></ion-label>
+      <ion-label><span>Sold Quantity:</span><span>{{item.sold_quantity}}</span></ion-label>
+      <ion-label><span>Returned Quantity:</span><span>{{item.returned_quantity}}</span></ion-label>
+      <ion-label><span>Sold Unit Price:</span><span>{{item.sold_unit_price}}</span></ion-label>
+      <ion-label><span>Amount Returned:</span><span>{{item.amount_returned}}</span></ion-label>
+      </ion-card>
+      </div>
+      </div>
+
+</ion-content>
+
+

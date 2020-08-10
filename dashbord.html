@@ -1,0 +1,36 @@
+<!--
+  Generated template for the DashbordPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Product Master</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar animated (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+  
+
+
+  <ion-fab right bottom>
+    <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="add-circle"></ion-icon></button>
+      <button ion-fab><ion-icon name="remove"></ion-icon></button>
+    
+    </ion-fab-list>
+  </ion-fab>
+
+  <!--<button ion-button [tooltip]="I'm a tooltip below a button" positionV="bottom" arrow>
+    Press me to see a tooltip
+  </button>-->
+</ion-content>
